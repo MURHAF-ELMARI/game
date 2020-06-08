@@ -7,21 +7,14 @@ def longWord(s):
     s=list(s)
     i=0
     while(i<len(s)):
-        print('9 line', s[i],repet[ord(s[i])])
         if(repet[ord(s[i])]!=-1):
             x=repet[ord(s[i])]
             if(temp>best_w_len):
-                print('temp',temp)
                 best_w_len=temp
                 beg=i-best_w_len
 
             repet=[-1]*(128+32)
             s[len(s)-1]=s[i]
-            print('i ',i)
-            print(s)
-            print('24 line',s[i],end=' ')
-            print( repet[ord(s[i])])
-            print('line 25 ' , temp)
             temp=0
 
             i=x+1
